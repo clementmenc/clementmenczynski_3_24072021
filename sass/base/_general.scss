@@ -1,0 +1,25 @@
+/* -------------------------------------------------- *\
+    Fonts
+\* -------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap');
+
+/* -------------------------------------------------- *\
+    Reset css and general style
+\* -------------------------------------------------- */
+
+// reset
+
+*{ box-sizing: border-box; margin: 0; padding: 0; }
+
+a{ text-decoration: none; color: inherit; }
+
+// General
+
+body{ font-size: 16px; font-family: 'Roboto', sans-serif; color: $black; }
+
+h1, h2{ font-size: 1.5rem; font-weight: 700; }
+
+h3{ font-size: 1.2rem; font-weight: 500; }
+
+p{ font-size: 1.1rem; }
