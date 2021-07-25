@@ -43,12 +43,7 @@
 
     &__title{ margin-bottom: 30px; }
 
-    &__steps{
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        margin-left: 12px;
-    }
+    &__steps{ display: flex; flex-direction: column; gap: 25px; margin-left: 12px; }
 
     &__step{
         @include box-shadow;
@@ -90,7 +85,14 @@
         .step__title{ font-size: 1rem; font-weight: 500; }
     }
 
-    
+    @media screen and (min-width: 740px){
+        &__steps{ flex-direction: row; flex-wrap: wrap; gap: 40px; }
+        &__step{ width: calc(50% - 20px); }
+    }
 
+    @media screen and (min-width: 1050px){
+        &__steps{ flex-direction: row; flex-wrap: wrap; gap: 40px; }
+        &__step{ width: calc(33.33% - 27px); }
+    }
 }
 
