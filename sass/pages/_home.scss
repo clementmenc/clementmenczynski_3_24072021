@@ -1,0 +1,96 @@
+// --------------------------------------------------
+// Section location
+// --------------------------------------------------
+
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    background-color: $darkGrey;
+
+    color: lighten($black, 21%);
+    font-weight: 500;
+}
+
+// --------------------------------------------------
+// Section explore
+// --------------------------------------------------
+
+.explore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: $grey;
+
+    text-align: center;
+
+    &__title{ max-width: 80%; }
+
+    &__catch-phrase{ color: lighten($black, 30%); }
+
+    &__btn{ margin: 15px 0; }
+}
+
+// --------------------------------------------------
+// Section functioning
+// --------------------------------------------------
+
+.functioning{
+
+    &__title{ margin-bottom: 30px; }
+
+    &__steps{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-left: 12px;
+    }
+
+    &__step{
+        @include box-shadow;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+        height: 75px;
+        
+        padding: 0 35px;
+        border-radius: $radius;
+        background-color: $grey;
+
+        @for $i from 1 through 3{
+            &:nth-child(#{$i})::before{
+                content: '#{$i}';
+                position: absolute;
+                top: 50%;
+                left: 0;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 24px;
+                height: 24px;
+
+                border-radius: 12px;
+                background-color: $purple;
+
+                color: $white;
+
+                transform: translate3d(-50%, -50%, 0);
+            }
+        }
+
+        .step__icon{ width: 20px; font-size: 1.3rem; color: $purple; }
+        .step__title{ font-size: 1rem; font-weight: 500; }
+    }
+
+    
+
+}
+

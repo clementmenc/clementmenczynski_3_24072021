@@ -1,12 +1,13 @@
-/* -------------------------------------------------- *\
-    Fonts
-\* -------------------------------------------------- */
+// --------------------------------------------------
+// Fonts
+// --------------------------------------------------
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap');
 
-/* -------------------------------------------------- *\
-    Reset css and general style
-\* -------------------------------------------------- */
+
+// --------------------------------------------------
+// Reset css and general style
+// --------------------------------------------------
 
 // reset
 
@@ -16,10 +17,52 @@ a{ text-decoration: none; color: inherit; }
 
 // General
 
-body{ font-size: 16px; font-family: 'Roboto', sans-serif; color: $black; }
+body{
+    margin-top: 63px;
+
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: $black;
+    background-color: $white;
+}
 
 h1, h2{ font-size: 1.5rem; font-weight: 700; }
 
 h3{ font-size: 1.2rem; font-weight: 500; }
 
 p{ font-size: 1.1rem; }
+
+.container{ padding: 40px 20px }
+
+// --------------------------------------------------
+// Header
+// --------------------------------------------------
+
+.header{
+    @include box-shadow(2px);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 63px;
+    background-color: $white;
+
+    &__arrow{
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        padding: 10px;
+
+        font-size: 1.3rem;
+
+        transform: translate3d(0, -50%, 0);
+    }
+
+    &__logo{ width: 163px; }
+}
+

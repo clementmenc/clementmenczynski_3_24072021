@@ -1,0 +1,17 @@
+// --------------------------------------------------
+// Button component
+// --------------------------------------------------
+
+.btn{
+    @include box-shadow;
+    background: $pink;
+    background: linear-gradient(170deg, $pink 0%, $purple 100%);
+    border: none;
+    border-radius: 25px;
+    padding: 0 20px;
+    min-width: 220px;
+    height: 50px;
+
+    color: $white;
+    font-size: 1rem;
+}
