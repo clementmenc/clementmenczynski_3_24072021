@@ -6,6 +6,7 @@
 
 $maxWidth: 1440px;
 
+
 // Colors
 
 $purple: #9356DC;
@@ -13,9 +14,14 @@ $pink: #FF79DA;
 $turquoise: #99E2D0;
 $grey: #F6F6F6;
 $darkGrey: #EAEAEA;
+$lightBlack: #353535;
 $black: #000;
 $white: #fff;
 
 // Border radius
 
 $radius: 20px;
+
+// Gradient
+
+$linearGradient: linear-gradient(170deg, $pink 0%, $purple 100%);

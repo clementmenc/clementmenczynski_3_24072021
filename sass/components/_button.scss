@@ -4,14 +4,45 @@
 
 .btn{
     @include box-shadow;
-    background: $pink;
-    background: linear-gradient(170deg, $pink 0%, $purple 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: $linearGradient;
     border: none;
     border-radius: 25px;
     padding: 0 20px;
     min-width: 220px;
     height: 50px;
+    overflow: hidden;
 
     color: $white;
     font-size: 1rem;
+
+    cursor: pointer;
+    opacity: 1;
+    transition: box-shadow .3s ease;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0;
+        transition: opacity .3s ease;
+    }
+
+    @media (hover: hover){
+        &:hover{
+            box-shadow: 0 5px 5px 0 rgb(0 0 0 / 25%);
+
+            &::before{
+                opacity: .2;
+            }
+        }
+    }
+    
 }
+

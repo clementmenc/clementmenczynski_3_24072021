@@ -33,6 +33,8 @@ h3{ font-size: 1.2rem; font-weight: 500; }
 
 p{ font-size: 1.1rem; }
 
+li{ list-style-type: none; }
+
 .container{ padding: 40px 20px;}
 
 @media screen and (min-width: $maxWidth + 40px){
@@ -55,6 +57,7 @@ p{ font-size: 1.1rem; }
     width: 100%;
     height: 63px;
     background-color: $white;
+    z-index: 100;
 
     &__arrow{
         position: absolute;
