@@ -73,3 +73,30 @@ li{ list-style-type: none; }
     &__logo{ width: 163px; }
 }
 
+// --------------------------------------------------
+// Footer
+// --------------------------------------------------
+
+.footer{
+    background-color: $lightBlack;
+    color: $white;
+
+   &__logo{
+       width: 100px;
+       height: auto;
+       margin-bottom: 20px;
+
+       filter: invert(100%);
+   }
+
+   &__links{
+       display: grid;
+       grid-template-columns: 1fr;
+       gap: 10px;
+
+       &__icon{
+           min-width: 20px;
+           margin-right: 10px;
+       }
+   }
+}
