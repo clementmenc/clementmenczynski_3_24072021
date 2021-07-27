@@ -35,68 +35,9 @@ p{ font-size: 1.1rem; }
 
 li{ list-style-type: none; }
 
-.container{ padding: 40px 20px;}
+.container, .container-mrg{ padding: 40px 20px;}
+.container-mrg{ margin: 0 auto; }
 
 @media screen and (min-width: $maxWidth + 40px){
     .container{ padding: 40px calc((100% - #{$maxWidth}) / 2); }
-}
-
-// --------------------------------------------------
-// Header
-// --------------------------------------------------
-
-.header{
-    @include box-shadow(2px);
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 63px;
-    background-color: $white;
-    z-index: 100;
-
-    &__arrow{
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        padding: 10px;
-
-        font-size: 1.3rem;
-
-        transform: translate3d(0, -50%, 0);
-    }
-
-    &__logo{ width: 163px; }
-}
-
-// --------------------------------------------------
-// Footer
-// --------------------------------------------------
-
-.footer{
-    background-color: $lightBlack;
-    color: $white;
-
-   &__logo{
-       width: 100px;
-       height: auto;
-       margin-bottom: 20px;
-
-       filter: invert(100%);
-   }
-
-   &__links{
-       display: grid;
-       grid-template-columns: 1fr;
-       gap: 10px;
-
-       &__icon{
-           min-width: 20px;
-           margin-right: 10px;
-       }
-   }
 }

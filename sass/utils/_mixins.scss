@@ -2,4 +2,4 @@
     Mixins
 \* -------------------------------------------------- */
 
-@mixin box-shadow($y: 5px){ box-shadow: 0 $y 5px 0 rgba($black, .10); }
+@mixin box-shadow($y: 5px){ box-shadow: 0 $y 5px 0 rgba($black, .1); }

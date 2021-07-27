@@ -4,7 +4,11 @@
 
 .heart-component{
     position: relative;
-    background-color: $white;
+    margin-right: 10px;
+
+    font-size: 1.6rem;
+
+    cursor: pointer;
 
     &::before{
         content: '';
@@ -23,7 +27,7 @@
         margin: 0 3px;
 
         path{
-            fill: $white;
+            fill: transparent;
             stroke: $black;
             stroke-width: 3rem;
             transition: fill .3s ease;
