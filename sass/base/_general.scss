@@ -41,3 +41,9 @@ li{ list-style-type: none; }
 @media screen and (min-width: $maxWidth + 40px){
     .container{ padding: 40px calc((100% - #{$maxWidth}) / 2); }
 }
+
+@for $i from 1 through 10{
+    .delay-#{$i}{
+        animation-delay: #{$i/10}s;
+    }
+}
