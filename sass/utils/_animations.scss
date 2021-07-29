@@ -1,9 +1,36 @@
+// --------------------------------------------------
+// Animations Css
+// --------------------------------------------------
+
+// Flip: Animation when hovering over a dish in a menu (/components/_cards.scss)
 @keyframes flip {
     from { transform: rotate(0) }
     to { transform: rotate(-360deg) }
 }
 
+// Reveal: Animation of the appearance of dishes in the menu (/pages/_menu.scss)
 @keyframes reveal {
     from { opacity: 0; transform: translate3d(0, 20px, 0); }
     to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+// Loader: Animation of the loading content (/components/_loader.scss)
+@keyframes loader {
+    from { height: 100vh; }
+    to { height: 63px; }
+}
+
+// Loader-logo: Logo animation when loading (/components/_loader.scss)
+
+@keyframes blink-logo {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    50% { opacity: 0; }
+    75% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes move-logo {
+    from{ transform: scale(2); }
+    to { transform: scale(1); }
 }

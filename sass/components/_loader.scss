@@ -1,0 +1,33 @@
+// --------------------------------------------------
+// Loader Home
+// --------------------------------------------------
+
+.loader{
+    position: relative;
+    height: 63px;
+    animation: loader .5s cubic-bezier(.44,.17,.48,1) both 2.5s;
+
+    &__logo{
+        transform: scale(2);
+        animation: blink-logo 1.5s ease-in-out both .5s, move-logo .5s cubic-bezier(.44,.17,.48,1) both 2.5s;
+        animation: move-logo .5s cubic-bezier(.44,.17,.48,1) both 2.5s;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(163px * 2);
+        height: 60px;
+        background: linear-gradient(90deg, rgba($white,0) 0%, rgba($white, 1) 2%);
+        transform: scale(1.5) translate3d(-25%, -50%, 0);
+        // border: 2px solid red;
+        animation: test 1.5s cubic-bezier(.44,.17,.48,1) both .5s;
+    }
+}
+
+@keyframes test {
+    from { transform: scale(1.5) translate3d(-25%, -50%, 0); }
+    to { transform: scale(1.5) translate3d(50%, -50%, 0); }
+}

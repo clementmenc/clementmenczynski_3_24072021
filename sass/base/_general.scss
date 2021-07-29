@@ -44,6 +44,6 @@ li{ list-style-type: none; }
 
 @for $i from 1 through 10{
     .delay-#{$i}{
-        animation-delay: #{$i/10}s;
+        animation-delay: #{$i*0.1}s;
     }
 }
