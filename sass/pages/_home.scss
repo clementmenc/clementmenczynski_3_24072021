@@ -28,7 +28,7 @@
             font-size: 1.1rem;
             font-weight: 500;
 
-            &::placeholder{ color: lighten($black, 21%); }
+            &::placeholder{ color: lighten($black, 21%); opacity: 1; }
             &:focus::placeholder{ opacity: .5; }
         }
     }
