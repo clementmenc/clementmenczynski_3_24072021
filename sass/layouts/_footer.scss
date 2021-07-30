@@ -15,13 +15,28 @@
    }
 
    &__links{
-       display: grid;
-       grid-template-columns: 1fr;
+       display: flex;
+       flex-direction: column;
        gap: 10px;
 
        &__icon{
            min-width: 20px;
            margin-right: 10px;
        }
+   }
+
+   @media screen and (min-width: $desktop){
+       &__logo{
+           display: block;
+           margin-bottom: 40px;
+           margin-inline: auto;
+       }
+
+       &__links{
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 750px;
+            margin-inline: auto;
+        }
    }
 }
