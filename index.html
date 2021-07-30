@@ -11,20 +11,24 @@
     <script src="https://kit.fontawesome.com/ea78e57d07.js" crossorigin="anonymous" async></script>
 </head>
 <body>
+
     <header class="header loader">
         <img class="header__logo loader__logo" src="images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
     </header>
 
-    <aside class="location container">
-        <i class="fas fa-map-marker-alt location__icon"></i>
-        <p class="location__city">Paris, Belleville</p>
-    </aside>
+    <form class="location">
+        <label class="location__city">
+            <i class="fas fa-map-marker-alt location__icon"></i>
+            <input type="text" name="city" class="location__city__input" placeholder="Paris, Belleville">
+        </label>
+    </form>
 
-    <main class="l-main">
+    <main class="l-main main-home">
         <section class="explore container">
             <h1 class="explore__title">Réservez le menu qui vous convient</h1>
             <p class="explore__catch-phrase">Découvre des restaurants d'exception, sélectionnés par nos soins.</p>
-            <a class="explore__btn btn">Explorer nos restaurants</a>
+            <a href="#restaurants" class="explore__btn btn">Explorer nos restaurants</a>
+            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" class="explore__bg">
         </section>
 
         <section class="functioning container">
@@ -45,7 +49,7 @@
             </div>
         </section>
 
-        <section class="restaurant container">
+        <section id="restaurants" class="restaurant container">
             <h2 class="restaurant__title">Restaurants</h2>
             <div class="restaurant__list">
                 <article class="restaurant__item card-restau" data-new="true">

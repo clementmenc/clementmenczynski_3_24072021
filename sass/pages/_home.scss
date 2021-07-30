@@ -7,13 +7,35 @@
     justify-content: center;
     align-items: center;
     gap: 18px;
-    padding-top: 20px; 
-    padding-bottom: 20px; 
     background-color: $darkGrey;
 
     color: lighten($black, 21%);
-    font-weight: 500;
+
+    &__city{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        height: 60px;
+        
+
+        &__input{
+            width: 120px;
+            height: 60px;
+            background-color: transparent;
+            outline: 0;
+            border: 0px;
+            font-size: 1.1rem;
+            font-weight: 500;
+
+            &::placeholder{ color: lighten($black, 21%); }
+            &:focus::placeholder{ opacity: .5; }
+        }
+    }
+
 }
+
+
 
 // --------------------------------------------------
 // Section explore
@@ -33,6 +55,28 @@
     &__catch-phrase{ color: lighten($black, 30%); }
 
     &__btn{ margin: 15px 0; }
+
+    &__bg{ display: none; }
+
+    @media screen and (min-width: $desktop){
+        position: relative;
+        overflow: hidden;
+        background-color: transparent;
+        grid-area: explore;
+
+        &__bg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            width: 100%;
+
+            transform: translate3d(-50%, -50%, 0) scale(1.2);
+            object-fit: cover;
+            opacity: .3;
+            z-index: -1;
+        }
+    }
 }
 
 // --------------------------------------------------
@@ -85,14 +129,18 @@
         .step__title{ font-size: 1rem; font-weight: 500; }
     }
 
-    @media screen and (min-width: $tablette){
+    @media screen and (min-width: $tablette) and (max-width: calc(#{$desktop} - 1px)){
         &__steps{ flex-direction: row; flex-wrap: wrap; gap: 40px; }
         &__step{ width: calc(50% - 20px); }
     }
 
     @media screen and (min-width: $desktop){
-        &__steps{ flex-direction: row; flex-wrap: wrap; gap: 40px; }
-        &__step{ width: calc(33.33% - 27px); }
+        grid-area: functioning;
+        border-radius: 0 0 0 $radius;
+        margin-bottom: 60px;
+        background-color: $white;
+
+        &__steps{ gap: 35px; }
     }
 }
 
@@ -121,5 +169,28 @@
             grid-template-rows: repeat(2, 1fr);
             gap: 40px;
         }
+    }
+
+    @media screen and (min-width: $desktop){
+        grid-area: restaurant;
+    }
+}
+
+// --------------------------------------------------
+// Desktop grid
+// --------------------------------------------------
+
+@media screen and (min-width: $desktop){
+    .main-home{
+        position: relative;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "explore explore"
+        "restaurant functioning";
+        background-color: $grey;
+
+        z-index: 0;
     }
 }
