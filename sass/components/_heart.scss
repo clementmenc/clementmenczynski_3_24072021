@@ -34,7 +34,7 @@
         }
     }
 
-    &:hover, &:focus{
+    &:hover, &:active{
         path{ fill: $black; }
         &::before{ opacity: 1; }
     }

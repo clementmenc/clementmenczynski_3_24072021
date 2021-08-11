@@ -107,11 +107,11 @@
         text-overflow: ellipsis;
     }
 
-    &:hover &__infos{
+    &:hover &__infos, &:active &__infos{
         width: calc(100% - 60px);
     }
 
-    &:hover &__check--icon{
+    &:hover &__check--icon, &:hover &__check--icon{
         animation: flip .6s ease both;
     }
 }
