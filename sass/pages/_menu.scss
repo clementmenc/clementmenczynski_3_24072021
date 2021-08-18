@@ -5,8 +5,14 @@
 .banner__img{
     display: block;
     width: 100%;
-    max-height: 500px;
+    max-height: 300px;
     object-fit: cover;
+}
+
+@media screen and (min-width: $desktop){
+    .banner__img{
+        max-height: 500px;
+    }
 }
 
 // --------------------------------------------------
